@@ -1,0 +1,11 @@
+a#header {
+    color: white;
+}
+
+footer{
+    text-align: center;
+    padding: 3px;
+    background-color: blue;
+    color:white;
+    display: block;
+}
