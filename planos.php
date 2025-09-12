@@ -39,9 +39,9 @@
                     <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
                     <a href="#" class="btn btn-primary">Visitar</a>
                 </div>
-                </div>
-            </div>
-        </div>      
+                </div>  
+            </div> 
+        </div> 
         </br>
         <footer>
             <?php include 'includes-site/footer.php'; ?>
