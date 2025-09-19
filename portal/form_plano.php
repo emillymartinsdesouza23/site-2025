@@ -29,12 +29,17 @@
         
         <div class="container">
             <br>
-
             <center><h5> PREENCHA OS CAMPOS ABAIXO PARA ADICIONAR UM NOVO PLANO </h5></center>
-
             <hr>
 
-            <form>
+            <?php
+            if(isset($_SESSION['msgFormPlano'])) {
+                echo $_SESSION['msgFormPlano'];
+                unset($_SESSION['msgFormPlano']);
+            }
+            ?>
+
+            <form action="cad_plano.php" method="POST">
                 <div class="form-row">
                     <div class="col">
                         <label for="nomePlano">* Nome</label>
@@ -52,8 +57,7 @@
                         <button type="reset" class="btn btn-danger">Limpar</button> 
                 </div>
             </form>
-            <br>
-            
+            <br>  
         </div>
         <footer>
             <!------------------------------- FOOTER ----------------------------------->

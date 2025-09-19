@@ -23,7 +23,6 @@
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="#" id="header"></a>
                 </li>
                 <?php 
-
                 if ($_SESSION['nivel'] != '3') { ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="header">
@@ -43,11 +42,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="lista_faturas.php" id="header"><i class="fa fa-credit-card-alt"></i> Faturas </a>
                 </li>
-                </ul>
-            </div>
-        </div>
-            <a href="../logout.php">
+                <?php 
+                if ($_SESSION['nivel'] != '3') { ?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="header">
+                    <i class="fa fa-plus"></i> Listar
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="lista_plano.php" id="header2"><i class="fa fa-cart-arrow-down"></i> &ensp; Plano</a></li>
+                    <li>
+                    <li><a class="dropdown-item" href="lista_cliente.php" id="header2"><i class="fa fa-address-book"></i> &ensp; Cliente</a></li>
+                    <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="form_atendimento.php" id="header2"><i class="fa fa-calendar"></i> &ensp; Atendimento</a></li>
+                    </ul>
+                </li>
+                <?php } ?>
+                </ul>   
+            </div>      
+            <a href="logout.php">
             <button class="btn btn-outline-light rounded-100"><strong><i class="fa fa-reply"></i> Sair</strong></button>
-            </a>
-        
+            </a>  
+        </div>
     </nav>
