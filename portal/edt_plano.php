@@ -17,7 +17,7 @@
 
         $con      = $conexao->query($consulta) or die ($conexao->error);
         while($dado = $con->fetch_array()); {
-            $nome_plano = $dado['nome_plano'];
+            $nome_plano = $dado['nome_plano']; 
             $desc_plano = $dado['desc_plano'];
             $vlr_plano  = $dado['vlr_plano'];
         }
