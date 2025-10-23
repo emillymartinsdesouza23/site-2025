@@ -57,6 +57,7 @@
                         <th scope="col">Descrição</th>
                         <th scope="col">valor</th>
                         <th scope="col">Editar</th>
+                        <th scope="col">Editar 2</th>
                         <th scope="col">Excluir</th>
                     </tr>
                 </thead>

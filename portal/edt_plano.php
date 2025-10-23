@@ -3,7 +3,8 @@
     include('conexao.php');
 
     $niveldapagina = array($mestre, $colaborador);
-    $id_plano      = filter_input(INPUT_GET, 'id_plano', FILTER_SANITIZE_NUMBER_INT);
+    $id_plano      = filter_input(INPUT_GET, 'id_plano',
+                    FILTER_SANITIZE_NUMBER_INT);
 
     if(!in_array ($nivel, $niveldapagina)) {
         echo
@@ -16,7 +17,8 @@
                     WHERE id_plano = '$id_plano' ";
 
         $con      = $conexao->query($consulta) or die ($conexao->error);
-        while($dado = $con->fetch_array()); {
+
+        while($dado = $con->fetch_array()) {
             $nome_plano = $dado['nome_plano']; 
             $desc_plano = $dado['desc_plano'];
             $vlr_plano  = $dado['vlr_plano'];
@@ -24,7 +26,6 @@
     } else {
         header("Location: lista_plano.php");
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -69,11 +70,12 @@
                     </div>
                     
                 </div>
+                <br>
                 <button type="submit" class="btn btn-primary">Salvar</button> 
             </form>
             <br>
         
-<footer>
+        <footer>
             <!------------------------------- FOOTER ----------------------------------->
             <?php include 'includes-portal/footer.php'; ?>
             <!------------------------------- FOOTER ----------------------------------->
