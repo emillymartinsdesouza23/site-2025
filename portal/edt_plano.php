@@ -54,7 +54,7 @@
             }
             ?>
 
-            <form action="save_plano.php" method="POST">
+            <form action="save_plano.php?id_plano=<?php echo $id_plano; ?>" method="POST">
                 <div class="form-row">
                     <div class="col">
                         <label for="nomePlano">* Nome</label>
